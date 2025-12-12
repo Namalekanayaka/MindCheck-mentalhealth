@@ -1,4 +1,4 @@
-# MindCheck - Mental Health Support Web App (Frontend)
+# MindCheck - Mental Health Support Web App 
 
 ## Project Overview
 **MindCheck** is a responsive and interactive **mental health support web application** built with **React** and **Tailwind CSS**.  
