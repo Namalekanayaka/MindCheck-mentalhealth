@@ -198,7 +198,7 @@ const Home = () => {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <p className="text-sm text-gray-600 text-center">
                         <strong>Disclaimer:</strong> MindCheck is not a substitute for professional medical advice, diagnosis, or treatment.
-                        If you are experiencing a mental health crisis, please contact emergency services or call the National Suicide Prevention Lifeline at 988.
+                        If you are experiencing a mental health crisis, please contact emergency services or call the National Mental Health Helpline at 1926.
                     </p>
                 </div>
             </section>

@@ -2,59 +2,68 @@
     {
         "id": 1,
         "category": "Emergency Hotlines",
-        "name": "National Suicide Prevention Lifeline",
-        "description": "24/7 free and confidential support for people in distress",
-        "contact": "988",
-        "website": "https://988lifeline.org",
-        "country": "USA"
+        "name": "National Mental Health Helpline",
+        "description": "24/7 free and confidential support in English, Sinhala, and Tamil",
+        "contact": "1926",
+        "website": "https://www.health.gov.lk",
+        "country": "Sri Lanka"
     },
     {
         "id": 2,
         "category": "Emergency Hotlines",
-        "name": "Crisis Text Line",
-        "description": "Free 24/7 support via text message",
-        "contact": "Text HOME to 741741",
-        "website": "https://www.crisistextline.org",
-        "country": "USA"
+        "name": "CCCline",
+        "description": "24/7 toll-free crisis support for emotional well-being",
+        "contact": "1333",
+        "website": "https://www.health.gov.lk",
+        "country": "Sri Lanka"
     },
     {
         "id": 3,
         "category": "Emergency Hotlines",
-        "name": "SAMHSA National Helpline",
-        "description": "Treatment referral and information service",
-        "contact": "1-800-662-4357",
-        "website": "https://www.samhsa.gov/find-help/national-helpline",
-        "country": "USA"
+        "name": "Sri Lanka Sumithrayo",
+        "description": "24/7 emotional support for those experiencing loneliness, depression, and suicidal thoughts",
+        "contact": "011 2692 909",
+        "website": "http://www.srilankasumithrayo.org",
+        "country": "Sri Lanka"
     },
     {
         "id": 4,
-        "category": "Online Resources",
-        "name": "Mental Health America",
-        "description": "Screening tools and educational resources",
-        "contact": "N/A",
-        "website": "https://www.mhanational.org",
-        "country": "USA"
+        "category": "Emergency Hotlines",
+        "name": "Medical Emergency Services",
+        "description": "Emergency medical assistance",
+        "contact": "110",
+        "website": "N/A",
+        "country": "Sri Lanka"
     },
     {
         "id": 5,
         "category": "Online Resources",
-        "name": "NAMI (National Alliance on Mental Illness)",
-        "description": "Support, education, and advocacy",
-        "contact": "1-800-950-6264",
-        "website": "https://www.nami.org",
-        "country": "USA"
+        "name": "National Council for Mental Health",
+        "description": "Mental health services and resources in Sri Lanka",
+        "contact": "+94 743 636 386",
+        "website": "https://www.ncmh.lk",
+        "country": "Sri Lanka"
     },
     {
         "id": 6,
         "category": "Online Resources",
-        "name": "Anxiety and Depression Association",
-        "description": "Resources for anxiety and depression",
+        "name": "Ministry of Health - Mental Health",
+        "description": "Government mental health programs and information",
         "contact": "N/A",
-        "website": "https://adaa.org",
-        "country": "USA"
+        "website": "https://www.health.gov.lk",
+        "country": "Sri Lanka"
     },
     {
         "id": 7,
+        "category": "Online Resources",
+        "name": "Sri Lanka College of Psychiatrists",
+        "description": "Professional psychiatric resources and information",
+        "contact": "N/A",
+        "website": "https://www.slcp.lk",
+        "country": "Sri Lanka"
+    },
+    {
+        "id": 8,
         "category": "Self-Help Tools",
         "name": "Headspace",
         "description": "Meditation and mindfulness app",
@@ -63,22 +72,13 @@
         "country": "Global"
     },
     {
-        "id": 8,
+        "id": 9,
         "category": "Self-Help Tools",
         "name": "Calm",
         "description": "Sleep, meditation, and relaxation",
         "contact": "N/A",
         "website": "https://www.calm.com",
         "country": "Global"
-    },
-    {
-        "id": 9,
-        "category": "Professional Help",
-        "name": "Psychology Today Therapist Finder",
-        "description": "Find therapists and psychiatrists near you",
-        "contact": "N/A",
-        "website": "https://www.psychologytoday.com/us/therapists",
-        "country": "USA"
     },
     {
         "id": 10,

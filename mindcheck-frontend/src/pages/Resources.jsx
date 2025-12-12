@@ -100,16 +100,23 @@ const Resources = () => {
                             <h3 className="text-xl font-bold text-red-700 mb-2">In Crisis? Get Help Now</h3>
                             <div className="space-y-2 text-gray-700">
                                 <p>
-                                    <strong>National Suicide Prevention Lifeline:</strong>{' '}
-                                    <a href="tel:988" className="text-red-600 hover:text-red-700 font-bold text-lg">
-                                        988
+                                    <strong>National Mental Health Helpline:</strong>{' '}
+                                    <a href="tel:1926" className="text-red-600 hover:text-red-700 font-bold text-lg">
+                                        1926
                                     </a>
+                                    {' '}(24/7, Free)
                                 </p>
                                 <p>
-                                    <strong>Crisis Text Line:</strong> Text{' '}
-                                    <span className="font-bold">HOME</span> to{' '}
-                                    <a href="sms:741741" className="text-red-600 hover:text-red-700 font-bold">
-                                        741741
+                                    <strong>CCCline Crisis Support:</strong>{' '}
+                                    <a href="tel:1333" className="text-red-600 hover:text-red-700 font-bold text-lg">
+                                        1333
+                                    </a>
+                                    {' '}(24/7, Toll-free)
+                                </p>
+                                <p>
+                                    <strong>Sri Lanka Sumithrayo:</strong>{' '}
+                                    <a href="tel:0112692909" className="text-red-600 hover:text-red-700 font-bold">
+                                        011 2692 909
                                     </a>
                                 </p>
                             </div>
@@ -129,8 +136,8 @@ const Resources = () => {
                             key={category}
                             onClick={() => setFilter(category)}
                             className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 ${filter === category
-                                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
-                                    : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-300'
+                                ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
+                                : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-300'
                                 }`}
                         >
                             {category}

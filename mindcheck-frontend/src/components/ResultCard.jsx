@@ -53,7 +53,7 @@ const ResultCard = ({ score, totalQuestions }) => {
                     'Reach out to a mental health professional',
                     'Contact your doctor for a referral',
                     'Use the resources page for immediate support',
-                    'Don\'t hesitate to call a crisis hotline if needed'
+                    'Call 1926 (Mental Health Helpline) or 1333 (CCCline) if needed'
                 ]
             };
         } else {
@@ -67,9 +67,9 @@ const ResultCard = ({ score, totalQuestions }) => {
                 message: 'Please seek professional help immediately. You don\'t have to face this alone.',
                 recommendations: [
                     'Contact a mental health professional today',
-                    'Call the National Suicide Prevention Lifeline: 988',
-                    'Text HOME to 741741 for Crisis Text Line',
-                    'Visit your nearest emergency room if in crisis'
+                    'Call National Mental Health Helpline: 1926 (24/7, Free)',
+                    'Call CCCline: 1333 or Sri Lanka Sumithrayo: 011 2692 909',
+                    'Visit your nearest hospital emergency department or call 110 if in crisis'
                 ]
             };
         }

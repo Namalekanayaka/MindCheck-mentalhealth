@@ -53,19 +53,20 @@ const Footer = () => {
                         <h3 className="text-xl font-bold mb-4">Need Help Now?</h3>
                         <div className="space-y-2 text-sm">
                             <p className="text-gray-300">
-                                <span className="font-semibold text-white">National Suicide Prevention:</span>
+                                <span className="font-semibold text-white">Mental Health Helpline:</span>
                                 <br />
-                                <a href="tel:988" className="text-blue-300 hover:text-blue-200">
-                                    988
+                                <a href="tel:1926" className="text-blue-300 hover:text-blue-200">
+                                    1926
                                 </a>
+                                {' '}(24/7, Free)
                             </p>
                             <p className="text-gray-300">
-                                <span className="font-semibold text-white">Crisis Text Line:</span>
+                                <span className="font-semibold text-white">CCCline Crisis Support:</span>
                                 <br />
-                                Text HOME to{' '}
-                                <a href="sms:741741" className="text-blue-300 hover:text-blue-200">
-                                    741741
+                                <a href="tel:1333" className="text-blue-300 hover:text-blue-200">
+                                    1333
                                 </a>
+                                {' '}(24/7, Toll-free)
                             </p>
                         </div>
                     </div>
