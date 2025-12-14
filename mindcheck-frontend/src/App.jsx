@@ -1,6 +1,8 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './components/ProtectedRoute';
+import PublicRoute from './components/PublicRoute';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
@@ -35,15 +37,55 @@ const AnimatedRoutes = () => {
     return (
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<PageTransition><Home /></PageTransition>} />
-                <Route path="/quiz" element={<PageTransition><Quiz /></PageTransition>} />
-                <Route path="/result" element={<PageTransition><Result /></PageTransition>} />
-                <Route path="/tracker" element={<PageTransition><Tracker /></PageTransition>} />
-                <Route path="/resources" element={<PageTransition><Resources /></PageTransition>} />
-                <Route path="/auth" element={<PageTransition><Auth /></PageTransition>} />
-                <Route path="/login" element={<PageTransition><Login /></PageTransition>} />
-                <Route path="/signup" element={<PageTransition><SignUp /></PageTransition>} />
-                <Route path="/profile" element={<PageTransition><UserProfile /></PageTransition>} />
+                {/* Default redirect to signup */}
+                <Route path="/" element={<Navigate to="/signup" replace />} />
+
+                {/* Public routes - redirect to home if already logged in */}
+                <Route path="/login" element={
+                    <PublicRoute>
+                        <PageTransition><Login /></PageTransition>
+                    </PublicRoute>
+                } />
+                <Route path="/signup" element={
+                    <PublicRoute>
+                        <PageTransition><SignUp /></PageTransition>
+                    </PublicRoute>
+                } />
+
+                {/* Protected routes - require authentication */}
+                <Route path="/home" element={
+                    <ProtectedRoute>
+                        <PageTransition><Home /></PageTransition>
+                    </ProtectedRoute>
+                } />
+                <Route path="/quiz" element={
+                    <ProtectedRoute>
+                        <PageTransition><Quiz /></PageTransition>
+                    </ProtectedRoute>
+                } />
+                <Route path="/result" element={
+                    <ProtectedRoute>
+                        <PageTransition><Result /></PageTransition>
+                    </ProtectedRoute>
+                } />
+                <Route path="/tracker" element={
+                    <ProtectedRoute>
+                        <PageTransition><Tracker /></PageTransition>
+                    </ProtectedRoute>
+                } />
+                <Route path="/resources" element={
+                    <ProtectedRoute>
+                        <PageTransition><Resources /></PageTransition>
+                    </ProtectedRoute>
+                } />
+                <Route path="/profile" element={
+                    <ProtectedRoute>
+                        <PageTransition><UserProfile /></PageTransition>
+                    </ProtectedRoute>
+                } />
+
+                {/* Legacy auth route - redirect to signup */}
+                <Route path="/auth" element={<Navigate to="/signup" replace />} />
             </Routes>
         </AnimatePresence>
     );

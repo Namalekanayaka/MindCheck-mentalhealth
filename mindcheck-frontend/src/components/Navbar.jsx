@@ -9,7 +9,7 @@ const Navbar = () => {
     const { currentUser } = useAuth();
 
     const navLinks = [
-        { path: '/', label: 'Home' },
+        { path: '/home', label: 'Home' },
         { path: '/quiz', label: 'Quiz' },
         { path: '/tracker', label: 'Tracker' },
         { path: '/resources', label: 'Resources' },

@@ -42,7 +42,7 @@ export default function SignUp() {
             setError('');
             setLoading(true);
             await signUp(formData.email, formData.password, formData.name);
-            navigate('/');
+            navigate('/home');
         } catch (error) {
             setError(getErrorMessage(error.code));
         } finally {
@@ -55,7 +55,7 @@ export default function SignUp() {
             setError('');
             setLoading(true);
             await signInWithGoogle();
-            navigate('/');
+            navigate('/home');
         } catch (error) {
             setError(getErrorMessage(error.code));
         } finally {

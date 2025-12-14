@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { fetchQuestions } from '../api/api';
 import { saveQuizResult } from '../utils/localStorage';
+import { useAuth } from '../contexts/AuthContext';
+import { saveAssessment } from '../services/dbService';
 import QuestionCard from '../components/QuestionCard';
 import ProgressBar from '../components/ProgressBar';
 
 const Quiz = () => {
     const navigate = useNavigate();
+    const { currentUser } = useAuth();
     const [questions, setQuestions] = useState([]);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [answers, setAnswers] = useState({});
@@ -47,12 +50,28 @@ const Quiz = () => {
         }
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         // Calculate total score
         const totalScore = Object.values(answers).reduce((sum, value) => sum + value, 0);
 
-        // Save to localStorage
+        // Save to localStorage (for backward compatibility)
         saveQuizResult(totalScore, answers);
+
+        // Save to Firebase for current user
+        if (currentUser) {
+            try {
+                await saveAssessment(currentUser.uid, {
+                    type: 'Mental Health Assessment',
+                    score: totalScore,
+                    totalQuestions: questions.length,
+                    answers: answers,
+                    completedAt: new Date().toISOString()
+                });
+            } catch (error) {
+                console.error('Failed to save assessment to Firebase:', error);
+                // Continue to results page even if save fails
+            }
+        }
 
         // Navigate to results page
         navigate('/result', {

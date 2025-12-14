@@ -22,7 +22,7 @@ export default function Login() {
             setError('');
             setLoading(true);
             await signIn(email, password);
-            navigate('/');
+            navigate('/home');
         } catch (error) {
             setError(getErrorMessage(error.code));
         } finally {
@@ -35,7 +35,7 @@ export default function Login() {
             setError('');
             setLoading(true);
             await signInWithGoogle();
-            navigate('/');
+            navigate('/home');
         } catch (error) {
             setError(getErrorMessage(error.code));
         } finally {
