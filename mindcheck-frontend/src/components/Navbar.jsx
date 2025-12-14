@@ -1,18 +1,24 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
 
 const Navbar = () => {
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
+    const { currentUser } = useAuth();
 
     const navLinks = [
         { path: '/', label: 'Home' },
         { path: '/quiz', label: 'Quiz' },
         { path: '/tracker', label: 'Tracker' },
         { path: '/resources', label: 'Resources' },
-        { path: '/auth', label: 'Login' }
+        ...(currentUser
+            ? [{ path: '/profile', label: 'Profile' }]
+            : [{ path: '/login', label: 'Login' }]
+        )
     ];
+
 
     const isActive = (path) => location.pathname === path;
 

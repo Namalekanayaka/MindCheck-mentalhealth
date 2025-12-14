@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { AuthProvider } from './contexts/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
@@ -9,6 +10,9 @@ import Result from './pages/Result';
 import Tracker from './pages/Tracker';
 import Resources from './pages/Resources';
 import Auth from './pages/Auth';
+import Login from './components/auth/Login';
+import SignUp from './components/auth/SignUp';
+import UserProfile from './components/UserProfile';
 
 // Page transition wrapper
 const PageTransition = ({ children }) => {
@@ -37,6 +41,9 @@ const AnimatedRoutes = () => {
                 <Route path="/tracker" element={<PageTransition><Tracker /></PageTransition>} />
                 <Route path="/resources" element={<PageTransition><Resources /></PageTransition>} />
                 <Route path="/auth" element={<PageTransition><Auth /></PageTransition>} />
+                <Route path="/login" element={<PageTransition><Login /></PageTransition>} />
+                <Route path="/signup" element={<PageTransition><SignUp /></PageTransition>} />
+                <Route path="/profile" element={<PageTransition><UserProfile /></PageTransition>} />
             </Routes>
         </AnimatePresence>
     );
@@ -45,14 +52,16 @@ const AnimatedRoutes = () => {
 function App() {
     return (
         <Router>
-            <div className="flex flex-col min-h-screen">
-                <Navbar />
-                <main className="flex-grow">
-                    <AnimatedRoutes />
-                </main>
-                <Footer />
-                <Chatbot />
-            </div>
+            <AuthProvider>
+                <div className="flex flex-col min-h-screen">
+                    <Navbar />
+                    <main className="flex-grow">
+                        <AnimatedRoutes />
+                    </main>
+                    <Footer />
+                    <Chatbot />
+                </div>
+            </AuthProvider>
         </Router>
     );
 }
