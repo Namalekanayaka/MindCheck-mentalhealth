@@ -80,12 +80,36 @@ VITE_FIREBASE_APP_ID=1:123456789012:web:abcdef123456
 
 ## Step 6: Create Firestore Database
 
-1. In Firebase Console, click **"Firestore Database"** in the left sidebar
-2. Click **"Create database"**
-3. Select **"Start in test mode"** (for development)
+**Current Firebase Interface (2024+):**
+
+1. In Firebase Console, click **"Build"** in the left sidebar to expand the menu
+2. Click **"Firestore Database"**
+3. Click **"Create database"** button
+
+**Choose Starting Mode:**
+4. You'll see two options:
+   - **Production mode** - Secure by default (denies all reads/writes)
+   - **Test mode** - Open for development (allows all reads/writes for 30 days)
+   
+5. Select **"Start in test mode"** for now
    - ⚠️ **Note**: This allows read/write access for 30 days. You'll need to update security rules later for production.
-4. Choose a location (select closest to your users, e.g., `asia-south1` for Sri Lanka)
-5. Click **"Enable"**
+   
+6. Click **"Next"**
+
+**Set Location:**
+7. Choose a Cloud Firestore location (select closest to your users)
+   - For Sri Lanka: `asia-south1` (Mumbai, India)
+   - For other regions: Choose the nearest available location
+   - ⚠️ **Important**: Location cannot be changed later!
+   
+8. Click **"Enable"**
+
+9. Wait for database creation (takes 30-60 seconds)
+
+**Alternative Path (if you see different UI):**
+- Some accounts may show: Click **"Cloud Firestore"** → **"Create database"**
+- Or: Look for **"Firestore Database"** directly in the left sidebar (not under Build)
+
 
 ## Step 7: Configure Security Rules (Optional but Recommended)
 
