@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 import Home from './pages/Home';
 import Quiz from './pages/Quiz';
 import Result from './pages/Result';
@@ -50,6 +51,7 @@ function App() {
                     <AnimatedRoutes />
                 </main>
                 <Footer />
+                <Chatbot />
             </div>
         </Router>
     );
